@@ -55,3 +55,11 @@ li { margin: 6px 0; }
 .card:hover { transform: translateY(-2px); border-color: var(--blue); }
 .card h3 { margin: 0 0 4px; color: var(--ink); }
 .card p { margin: 0; color: var(--muted); font-size: 15px; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+th { font-weight: 600; color: var(--ink); background: #fafafa; }
+td { color: var(--muted); }
+h4 { font-size: 16px; margin: 18px 0 6px; color: var(--ink); }
+ol { padding-left: 22px; }
+ol li { margin: 6px 0; }
+code { background: #f2f2f7; padding: 2px 6px; border-radius: 4px; font-size: 14px; }

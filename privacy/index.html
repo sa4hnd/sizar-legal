@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — Sheda</title>
-  <meta name="description" content="Sheda Privacy Policy." />
+  <meta name="description" content="Sheda Privacy Policy — how we collect, use, store, and protect your data." />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
@@ -19,90 +19,217 @@
 
   <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: June 2026</p>
+    <p class="updated">Last updated: June 26, 2026</p>
 
-    <p>Sheda ("Sheda", "we", "us") operates a marketplace that connects guests with property owners ("hosts") for short-term stays in Iraq and the Kurdistan Region. This Privacy Policy explains what we collect, why, and your choices. By using the Sheda app, you agree to this policy.</p>
+    <p>Sheda (&ldquo;Sheda,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; &ldquo;our&rdquo;) operates a mobile marketplace application that connects guests with independent property owners (&ldquo;hosts&rdquo;) for short-term accommodation in Iraq and the Kurdistan Region. This Privacy Policy describes the information we collect, how we use and protect it, the third parties we share it with, your rights over your data, and how to contact us. By creating an account or using the Sheda app, you agree to the practices described here.</p>
 
-    <h2>1. Information we collect</h2>
-    <h3>Account information</h3>
+    <!-- ───────────────────────────────────── 1 ───────────────────────────────────── -->
+    <h2>1. Information We Collect</h2>
+
+    <h3>1.1 Account Information</h3>
+    <p>When you register, we collect:</p>
     <ul>
-      <li>Name, email address, phone number, and the city you live in.</li>
-      <li>Your role (guest or host) and profile photo, if you add one.</li>
+      <li><strong>Full name</strong> &mdash; displayed on your profile and shared with hosts/guests for bookings.</li>
+      <li><strong>Email address</strong> &mdash; used for login and essential transactional communications.</li>
+      <li><strong>Phone number</strong> &mdash; used for account recovery and WhatsApp-based customer support.</li>
+      <li><strong>City</strong> &mdash; used to personalize property recommendations.</li>
+      <li><strong>Role</strong> &mdash; whether you use Sheda as a guest, host, or both.</li>
+      <li><strong>Profile photo</strong> (optional) &mdash; displayed on your public profile.</li>
+    </ul>
+    <p>We authenticate users with <strong>email and password only</strong>. We do not use Sign in with Apple, Google, or any other third-party social login. Passwords are salted and hashed; we never store or transmit plaintext passwords.</p>
+
+    <h3>1.2 Identity Verification Documents</h3>
+    <p>To maintain a safe and trusted community, Sheda requires identity verification before a user can book a stay or list a property. We collect:</p>
+    <ul>
+      <li><strong>A photograph of a government-issued ID</strong> (Iraqi national ID card / unified card, passport, or driver&rsquo;s license).</li>
+      <li><strong>A selfie photograph</strong> for face-match comparison with the ID.</li>
     </ul>
 
-    <h3>Identity verification</h3>
-    <p>To keep the community safe, guests and hosts verify their identity. You provide a photo of a government ID and a selfie. These images are analyzed by an automated identity-verification service (Google Gemini) to confirm the ID appears genuine and matches the selfie. We store these documents securely in a private, access-controlled bucket. They are visible only to you, to authorized Sheda administrators, and — for a confirmed booking — to the host you are staying with, so they know who is staying at their property.</p>
+    <h4>How verification works</h4>
+    <ol>
+      <li>You upload your ID photo and selfie through the Sheda app.</li>
+      <li>An automated analysis service (<strong>Google Gemini</strong>, provided by Google LLC) compares the documents to confirm the ID appears genuine and the selfie matches the photo on the ID.</li>
+      <li>A Sheda administrator performs a final manual review and approves or rejects the verification.</li>
+      <li>You receive an in-app notification of the outcome.</li>
+    </ol>
 
-    <h3>Listings, location, and media</h3>
+    <h4>How identity documents are stored</h4>
     <ul>
-      <li>Hosts provide property details, photos and videos, a text address, and a map location (latitude/longitude). With your permission, we may use your device location to help you place a property pin.</li>
-      <li>Photos and videos you upload are stored in our media storage, organized per property.</li>
+      <li>ID photos and selfies are uploaded to a <strong>private, access-controlled storage bucket</strong> hosted by Supabase (see Section 3). The bucket is not publicly accessible; files cannot be accessed via a public URL.</li>
+      <li>Access is restricted to: <strong>(a)</strong> you (the document owner), <strong>(b)</strong> authorized Sheda administrators, and <strong>(c)</strong> the host of a confirmed booking (so they can verify who is staying at their property).</li>
+      <li>Documents are permanently deleted when you delete your account.</li>
     </ul>
 
-    <h3>Bookings and payments</h3>
+    <h4>Purpose and legal basis</h4>
+    <p>Identity verification serves our legitimate interest in fraud prevention, user safety, and compliance with Iraqi regulations governing short-term rental marketplaces. You may decline verification, but you will not be able to book or list properties.</p>
+
+    <h3>1.3 Property Listings, Location, and Media</h3>
     <ul>
-      <li>Booking dates, guest count, and amounts.</li>
-      <li>Payments are processed by our third-party payment provider, <strong>Wayl</strong>. Your card or banking details are entered on Wayl's secure checkout and are <strong>never stored on Sheda's servers</strong>. We retain a record of the transaction (amount, status, and a reference/order ID) to operate the booking and pay out hosts.</li>
+      <li>Hosts provide property details (title, description, type, amenities, pricing, check-in/check-out times, maximum guests), photos, videos, a text address, and a map-pin location (latitude and longitude).</li>
+      <li>If the host grants permission via the iOS location prompt, we use <strong>device location</strong> solely to help place the property pin on the map. We do not track location in the background or use it for advertising.</li>
+      <li>Photos and videos are stored in a <strong>media storage bucket</strong> organized per property.</li>
     </ul>
 
-    <h3>Messages and reviews</h3>
+    <h3>1.4 Bookings and Payments</h3>
     <ul>
-      <li>Messages you exchange with other users, including any photos or videos you send in chat.</li>
-      <li>Reviews and ratings you leave after a stay.</li>
-    </ul>
-
-    <h3>Device and usage</h3>
-    <ul>
-      <li>A device push-notification token (if you enable notifications) so we can alert you about bookings, payments, messages, and verification updates.</li>
-      <li>Basic technical data needed to run and secure the app.</li>
-    </ul>
-
-    <h2>2. How we use your information</h2>
-    <ul>
-      <li>To create and manage your account and listings.</li>
-      <li>To verify identity and reduce fraud and abuse.</li>
-      <li>To process bookings, payments, and host payouts.</li>
-      <li>To enable messaging, reviews, and notifications.</li>
-      <li>To provide customer support and comply with legal obligations.</li>
+      <li>We store booking metadata: property ID, check-in and check-out dates, guest count, total amount (in Iraqi Dinar / IQD), booking status, and a unique booking code.</li>
+      <li>Payments are processed exclusively by our third-party payment provider, <strong>Wayl</strong> (an Iraqi-licensed payment gateway supporting FIB and FastPay). The payment flow opens Wayl&rsquo;s secure checkout in a WebView; <strong>Sheda never collects, transmits, or stores your card number, bank account, or any payment credentials</strong>.</li>
+      <li>We retain a record of each transaction: amount, currency (IQD), payment status, Wayl order/reference ID, and timestamp &mdash; solely to operate the booking, calculate host payouts and service fees, and comply with Iraqi financial record-keeping requirements.</li>
     </ul>
 
     <div class="callout">
-      <strong>Payments are for real-world stays, not digital content.</strong> Sheda facilitates physical accommodation between independent hosts and guests. Payment is collected through Wayl for a real-world service (a place to stay) and is not a purchase of digital goods or in-app content.
+      <strong>Why payments are not processed through Apple&rsquo;s In-App Purchase.</strong><br>
+      Sheda facilitates payment for <strong>physical, real-world accommodation</strong> &mdash; a place to stay at a specific address in Iraq. This is a real-world service between an independent host and a guest. It is not a purchase of digital goods, digital content, premium app features, subscriptions, or in-app currency. Under <a href="https://developer.apple.com/app-store/review/guidelines/#business">Apple&rsquo;s App Store Review Guidelines &sect;3.1.3(e)</a>, apps may use external payment methods for physical goods and services delivered outside the app. Sheda&rsquo;s payment model complies with this guideline.
     </div>
 
-    <h2>3. How we share information</h2>
+    <h3>1.5 Messages and Chat Media</h3>
     <ul>
-      <li><strong>Between guests and hosts</strong> as needed to complete a booking (e.g. the host sees the guest's verified identity for a confirmed stay; both parties see each other's public profile and can message).</li>
-      <li><strong>Service providers</strong> who help us operate: our backend and storage provider (Supabase), our identity-verification provider (Google Gemini), our payment provider (Wayl), and push-notification delivery (Expo). They process data only to provide their service.</li>
-      <li><strong>Legal</strong>: when required by law, or to protect rights, safety, and the integrity of the platform.</li>
+      <li>Text messages exchanged between guests and hosts through the in-app chat.</li>
+      <li>Photos and videos shared within chat conversations, stored in a dedicated chat-media storage bucket.</li>
     </ul>
-    <p>We do <strong>not</strong> sell your personal information.</p>
+    <p>Chat data is associated with a conversation (linked to a property and two participants) and is used solely to facilitate communication between the parties to a booking.</p>
 
-    <h2>4. Data retention</h2>
-    <p>We keep your information for as long as your account is active or as needed to provide the service, resolve disputes, and meet legal and financial record-keeping requirements. Payout and payment records are retained for accounting and audit purposes.</p>
-
-    <h2>5. Security</h2>
-    <p>Identity documents and payment proofs are kept in private, access-controlled storage. Access to data is governed by row-level security and role-based permissions. No system is perfectly secure, but we take reasonable measures to protect your information.</p>
-
-    <h2>6. Your choices and rights</h2>
+    <h3>1.6 Device and Technical Data</h3>
     <ul>
-      <li>View and edit your profile, including your city, in the app.</li>
-      <li>Turn notifications on or off in your device settings.</li>
-      <li>Delete your account and all associated data directly in the app (Profile &rarr; Delete account), or by contacting us. See our <a href="/delete">Data Deletion</a> page for details.</li>
-      <li>Request access to or correction of your personal data by contacting us.</li>
+      <li><strong>Push notification token</strong> &mdash; if you enable notifications, we store an Expo push token to deliver booking confirmations, payment updates, new messages, and verification status changes. You can disable notifications at any time via iOS Settings.</li>
+      <li><strong>Device platform and OS version</strong> &mdash; stored alongside the push token for delivery routing.</li>
+      <li><strong>Device integrity signals</strong> &mdash; at app launch (in production builds only), we perform a local-only check for jailbreak/root status and hooking frameworks as a fraud deterrent. The result is logged to a <code>security_events</code> table. This check does not transmit device identifiers or fingerprints to any third party.</li>
     </ul>
 
-    <h2>7. Children</h2>
-    <p>Sheda is intended for users 18 and older. We do not knowingly collect data from children.</p>
+    <h3>1.7 Data We Do NOT Collect</h3>
+    <ul>
+      <li>We do <strong>not</strong> use advertising identifiers (IDFA) or tracking frameworks.</li>
+      <li>We do <strong>not</strong> use analytics SDKs (Google Analytics, Firebase Analytics, Facebook SDK, etc.).</li>
+      <li>We do <strong>not</strong> track users across other apps or websites.</li>
+      <li>We do <strong>not</strong> collect precise location in the background.</li>
+      <li>We do <strong>not</strong> collect contacts, calendars, health data, or browsing history.</li>
+      <li>We do <strong>not</strong> sell, rent, or trade personal information to any third party for advertising or marketing purposes.</li>
+    </ul>
 
-    <h2>8. Changes</h2>
-    <p>We may update this policy. Material changes will be reflected by the "Last updated" date above.</p>
+    <!-- ───────────────────────────────────── 2 ───────────────────────────────────── -->
+    <h2>2. How We Use Your Information</h2>
+    <table>
+      <thead><tr><th>Purpose</th><th>Data used</th></tr></thead>
+      <tbody>
+        <tr><td>Create and manage your account</td><td>Name, email, phone, city, role, password hash</td></tr>
+        <tr><td>Verify identity and prevent fraud</td><td>ID photo, selfie, device integrity signals</td></tr>
+        <tr><td>Display and manage property listings</td><td>Listing details, photos/videos, map coordinates</td></tr>
+        <tr><td>Process bookings and calculate pricing</td><td>Booking dates, guest count, property pricing, service fees</td></tr>
+        <tr><td>Facilitate payments and host payouts</td><td>Wayl order ID, amount, payment status</td></tr>
+        <tr><td>Enable in-app messaging</td><td>Chat messages and media</td></tr>
+        <tr><td>Send push notifications</td><td>Expo push token, device platform</td></tr>
+        <tr><td>Provide customer support</td><td>Account info, booking history, chat history</td></tr>
+        <tr><td>Comply with legal and financial obligations</td><td>Transaction records, audit logs</td></tr>
+        <tr><td>Enforce our Terms of Service</td><td>Account activity, admin audit logs</td></tr>
+      </tbody>
+    </table>
 
-    <h2>9. Contact</h2>
-    <p>Questions about privacy? Contact us on WhatsApp at <a href="https://wa.me/9647507098669">+964 750 709 8669</a>.</p>
+    <!-- ───────────────────────────────────── 3 ───────────────────────────────────── -->
+    <h2>3. Third-Party Service Providers</h2>
+    <p>We share data with the following providers, strictly to operate the service:</p>
+    <table>
+      <thead><tr><th>Provider</th><th>Purpose</th><th>Data shared</th><th>Location</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Supabase Inc.</strong></td><td>Backend database, authentication, file storage, real-time messaging, edge functions</td><td>All user data (encrypted at rest and in transit)</td><td>United States (AWS infrastructure)</td></tr>
+        <tr><td><strong>Google LLC (Gemini)</strong></td><td>Automated identity verification (ID genuineness + face match)</td><td>ID photo and selfie (sent per verification request)</td><td>United States</td></tr>
+        <tr><td><strong>Wayl (Iraq)</strong></td><td>Payment processing (FIB, FastPay)</td><td>Booking amount and reference &mdash; card/bank details entered on Wayl&rsquo;s checkout only</td><td>Iraq</td></tr>
+        <tr><td><strong>Expo (Software Mansion)</strong></td><td>Push notification delivery</td><td>Expo push token, notification title/body</td><td>United States</td></tr>
+        <tr><td><strong>Google Maps Platform</strong></td><td>Map tiles and geocoding for property locations</td><td>Latitude/longitude of property pins</td><td>United States</td></tr>
+      </tbody>
+    </table>
+    <p>Each provider processes data only as needed to deliver its service and is subject to its own privacy policy. We do not share data with advertising networks, data brokers, or any party not listed above.</p>
+
+    <!-- ───────────────────────────────────── 4 ───────────────────────────────────── -->
+    <h2>4. Data Storage and Security</h2>
+
+    <h3>4.1 Where data is stored</h3>
+    <p>All data is hosted on <strong>Supabase</strong> (PostgreSQL database + S3-compatible object storage on AWS). Identity documents and payment proofs are in <strong>private buckets</strong> with no public URL access. Chat media is in a separate storage bucket.</p>
+
+    <h3>4.2 Authentication credentials</h3>
+    <p>On iOS and Android, authentication tokens (session JWT) are stored in the <strong>device&rsquo;s encrypted keychain</strong> via <code>expo-secure-store</code>. Tokens are never stored in plain-text storage (e.g., AsyncStorage or UserDefaults). On web, tokens use <code>localStorage</code> (browser-standard storage).</p>
+
+    <h3>4.3 Access controls</h3>
+    <ul>
+      <li><strong>Row-Level Security (RLS)</strong> is enabled on every database table with no exceptions. Each query is evaluated against the authenticated user&rsquo;s JWT; users can only access rows they are authorized to see.</li>
+      <li><strong>Role-based permissions</strong>: admin actions (ID review, payout recording, property approval) are restricted to accounts with the <code>is_admin</code> flag. All admin actions are logged to an <code>admin_audit_log</code> table.</li>
+      <li><strong>Server-side price recalculation</strong>: booking totals are recalculated in a Supabase Edge Function from property pricing and dates. The app never trusts client-sent amounts.</li>
+      <li><strong>Webhook signature verification</strong>: Wayl payment webhooks are verified via a shared secret before any booking is confirmed.</li>
+      <li><strong>Input sanitization</strong>: all user-submitted text (property descriptions, chat messages) is sanitized to strip HTML and script content.</li>
+    </ul>
+
+    <h3>4.4 Encryption</h3>
+    <ul>
+      <li><strong>In transit</strong>: all communication between the app and Supabase uses TLS 1.2+.</li>
+      <li><strong>At rest</strong>: Supabase encrypts database volumes and storage objects at rest using AES-256.</li>
+    </ul>
+
+    <!-- ───────────────────────────────────── 5 ───────────────────────────────────── -->
+    <h2>5. Data Retention</h2>
+    <ul>
+      <li><strong>Active accounts</strong>: data is retained for as long as your account is active.</li>
+      <li><strong>Deleted accounts</strong>: when you delete your account (via Profile &rarr; Delete account in the app, or by contacting us), all personal data is permanently removed within 24 hours. See our <a href="/delete">Data Deletion</a> page for details.</li>
+      <li><strong>Financial records</strong>: anonymized transaction records (amounts and reference IDs without personal identifiers) may be retained as required by Iraqi financial reporting laws and for audit purposes.</li>
+      <li><strong>Admin audit logs</strong>: retained for security and compliance purposes.</li>
+    </ul>
+
+    <!-- ───────────────────────────────────── 6 ───────────────────────────────────── -->
+    <h2>6. Your Rights and Choices</h2>
+    <ul>
+      <li><strong>Access and edit</strong> your profile information (name, phone, city, photo) at any time in the app.</li>
+      <li><strong>Delete your account</strong> and all associated data directly in the app (Profile &rarr; Delete account). Your data will be permanently removed within 24 hours. You may also request deletion by contacting us.</li>
+      <li><strong>Disable notifications</strong> at any time via iOS Settings &gt; Sheda &gt; Notifications.</li>
+      <li><strong>Revoke location permission</strong> at any time via iOS Settings &gt; Sheda &gt; Location.</li>
+      <li><strong>Revoke camera/photo access</strong> at any time via iOS Settings &gt; Sheda &gt; Photos / Camera.</li>
+      <li><strong>Request a copy</strong> of your personal data by contacting us.</li>
+      <li><strong>Request correction</strong> of inaccurate personal data by contacting us.</li>
+    </ul>
+
+    <!-- ───────────────────────────────────── 7 ───────────────────────────────────── -->
+    <h2>7. User-Generated Content and Moderation</h2>
+    <p>Sheda allows users to create property listings, send chat messages, and share photos/videos. To maintain a safe community:</p>
+    <ul>
+      <li>Users can <strong>report</strong> any listing, host, or user directly from the app.</li>
+      <li>Users can <strong>block</strong> other users to prevent further communication.</li>
+      <li>Reported content is reviewed by our team within 24 hours.</li>
+      <li>We reserve the right to remove content and suspend accounts that violate our <a href="/terms">Terms of Service</a>.</li>
+    </ul>
+
+    <!-- ───────────────────────────────────── 8 ───────────────────────────────────── -->
+    <h2>8. iOS Device Permissions</h2>
+    <p>The Sheda app may request the following device permissions. Each is optional and can be revoked at any time in iOS Settings:</p>
+    <table>
+      <thead><tr><th>Permission</th><th>Purpose</th><th>When requested</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Location (When In Use)</strong></td><td>Help hosts pin their property on the map</td><td>Only when adding/editing a property location</td></tr>
+        <tr><td><strong>Camera</strong></td><td>Take photos for property listings or identity verification</td><td>When tapping "Take photo" in media picker or ID verification</td></tr>
+        <tr><td><strong>Photo Library</strong></td><td>Select existing photos/videos for listings, chat, or ID verification</td><td>When tapping "Choose from library"</td></tr>
+        <tr><td><strong>Notifications</strong></td><td>Receive booking, payment, message, and verification alerts</td><td>After first login</td></tr>
+      </tbody>
+    </table>
+
+    <!-- ───────────────────────────────────── 9 ───────────────────────────────────── -->
+    <h2>9. Children</h2>
+    <p>Sheda is intended for users aged 18 and older. We do not knowingly collect personal information from children under 18. If we become aware that a child has provided us with personal data, we will promptly delete the account and associated data.</p>
+
+    <!-- ───────────────────────────────────── 10 ──────────────────────────────────── -->
+    <h2>10. International Data Transfers</h2>
+    <p>Your data may be transferred to and processed in the United States (where Supabase, Google, and Expo infrastructure is located) and Iraq (where Wayl operates). By using Sheda, you consent to these transfers. We ensure that all service providers maintain appropriate security measures.</p>
+
+    <!-- ───────────────────────────────────── 11 ──────────────────────────────────── -->
+    <h2>11. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we make material changes, we will update the &ldquo;Last updated&rdquo; date at the top of this page. Continued use of Sheda after changes constitutes acceptance of the updated policy. We encourage you to review this page periodically.</p>
+
+    <!-- ───────────────────────────────────── 12 ──────────────────────────────────── -->
+    <h2>12. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, contact us:</p>
+    <ul>
+      <li><strong>WhatsApp</strong>: <a href="https://wa.me/9647507098669">+964 750 709 8669</a></li>
+      <li><strong>Email</strong>: <a href="mailto:privacy@sheda.app">privacy@sheda.app</a></li>
+    </ul>
+    <p>We aim to respond to all requests within 48 hours.</p>
   </div>
 
-  <div class="footer">© <span id="y"></span> Sheda · by Sahnd Hamzani</div>
+  <div class="footer">&copy; <span id="y"></span> Sheda &middot; by Sahnd Hamzani</div>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
