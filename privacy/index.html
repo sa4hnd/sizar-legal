@@ -73,13 +73,19 @@
     <h3>1.4 Bookings and Payments</h3>
     <ul>
       <li>We store booking metadata: property ID, check-in and check-out dates, guest count, total amount (in Iraqi Dinar / IQD), booking status, and a unique booking code.</li>
-      <li>Payments are processed exclusively by our third-party payment provider, <strong>Wayl</strong> (an Iraqi-licensed payment gateway supporting FIB and FastPay). The payment flow opens Wayl&rsquo;s secure checkout in a WebView; <strong>Sheda never collects, transmits, or stores your card number, bank account, or any payment credentials</strong>.</li>
-      <li>We retain a record of each transaction: amount, currency (IQD), payment status, Wayl order/reference ID, and timestamp &mdash; solely to operate the booking, calculate host payouts and service fees, and comply with Iraqi financial record-keeping requirements.</li>
+      <li>Payments are processed exclusively by our third-party payment provider, <strong>Wayl</strong> (Ideas Space for IT, Fintech, Banking, HR Development &amp; General Trade Ltd., registered in Iraq, Reg. No. 18/03/2019 - R.C.A. 2-000009249, also registered in Abu Dhabi Global Market, License No. 21262). Wayl is a <strong>PCI DSS Level 1</strong> certified payment processor supporting FIB and FastPay. The payment flow opens Wayl&rsquo;s secure checkout in a WebView; <strong>Sheda never collects, transmits, or stores your card number, bank account, or any payment credentials</strong>.</li>
+      <li>When you complete a payment through Wayl, your payment data (card details, bank account information) is collected and processed directly by Wayl under their own <a href="https://wayl.io/privacy">Privacy Policy</a> and <a href="https://wayl.io/terms">Terms of Service</a>. Wayl encrypts all data in transit and at rest, maintains SOC 2&ndash;compliant infrastructure, and retains transaction records for a minimum of 7 years as required by Iraqi financial regulations.</li>
+      <li>We retain a record of each transaction on our side: amount, currency (IQD), payment status, Wayl order/reference ID, and timestamp &mdash; solely to operate the booking, calculate host payouts and service fees, and comply with Iraqi financial record-keeping requirements. We do <strong>not</strong> have access to your full card number or bank credentials.</li>
     </ul>
 
     <div class="callout">
       <strong>Why payments are not processed through Apple&rsquo;s In-App Purchase.</strong><br>
       Sheda facilitates payment for <strong>physical, real-world accommodation</strong> &mdash; a place to stay at a specific address in Iraq. This is a real-world service between an independent host and a guest. It is not a purchase of digital goods, digital content, premium app features, subscriptions, or in-app currency. Under <a href="https://developer.apple.com/app-store/review/guidelines/#business">Apple&rsquo;s App Store Review Guidelines &sect;3.1.3(e)</a>, apps may use external payment methods for physical goods and services delivered outside the app. Sheda&rsquo;s payment model complies with this guideline.
+    </div>
+
+    <div class="callout">
+      <strong>Wayl&rsquo;s own legal policies apply to your payment data.</strong><br>
+      When you enter payment details on Wayl&rsquo;s checkout, you are interacting directly with Wayl&rsquo;s platform. Wayl&rsquo;s data handling is governed by their <a href="https://wayl.io/privacy">Privacy Policy</a> and <a href="https://wayl.io/terms">Terms of Service</a>. Wayl does not sell personal data to third parties for marketing. Wayl shares payment data only with payment processors (QI Card, FIB, ZainCash), as required by law, or in connection with business transfers. For questions about how Wayl handles your payment data, contact Wayl at <a href="mailto:privacy@wayl.io">privacy@wayl.io</a>.
     </div>
 
     <h3>1.5 Messages and Chat Media</h3>
@@ -132,7 +138,7 @@
       <tbody>
         <tr><td><strong>Supabase Inc.</strong></td><td>Backend database, authentication, file storage, real-time messaging, edge functions</td><td>All user data (encrypted at rest and in transit)</td><td>United States (AWS infrastructure)</td></tr>
         <tr><td><strong>Google LLC (Gemini)</strong></td><td>Automated identity verification (ID genuineness + face match)</td><td>ID photo and selfie (sent per verification request)</td><td>United States</td></tr>
-        <tr><td><strong>Wayl (Iraq)</strong></td><td>Payment processing (FIB, FastPay)</td><td>Booking amount and reference &mdash; card/bank details entered on Wayl&rsquo;s checkout only</td><td>Iraq</td></tr>
+        <tr><td><strong>Wayl</strong> (Ideas Space Ltd., Iraq &amp; ADGM) &mdash; <a href="https://wayl.io/privacy">Privacy</a> · <a href="https://wayl.io/terms">Terms</a></td><td>Payment processing (FIB, FastPay) &mdash; PCI DSS Level 1 certified</td><td>Booking amount and reference &mdash; card/bank details entered on Wayl&rsquo;s checkout only, processed under Wayl&rsquo;s own privacy policy</td><td>Iraq / UAE (ADGM)</td></tr>
         <tr><td><strong>Expo (Software Mansion)</strong></td><td>Push notification delivery</td><td>Expo push token, notification title/body</td><td>United States</td></tr>
         <tr><td><strong>Google Maps Platform</strong></td><td>Map tiles and geocoding for property locations</td><td>Latitude/longitude of property pins</td><td>United States</td></tr>
       </tbody>
